@@ -69,7 +69,7 @@ class Config():
     filename_glove = "../dut_extractor/data/nlwiki_20180420_300d.txt"
     # trimmed embeddings (created from glove_filename with build_data.py)
     filename_trimmed = "data/nlwiki_20180420_300d.npz"
-    use_pretrained = False
+    use_pretrained = True
 
     # dataset
     filename_dev = "data/valid_dutch.txt"
@@ -89,7 +89,7 @@ class Config():
     train_embeddings = False
     nepochs          = 200
     dropout          = 0.5
-    batch_size       = 50
+    batch_size       = 20
     lr_method        = "adam"
     lr               = 0.001
     lr_decay         = 1.0
@@ -103,4 +103,4 @@ class Config():
 
     # NOTE: if both chars and crf, only 1.6x slower on GPU
     use_crf = False # if crf, training is 1.7x slower on CPU
-    use_chars = False # if char embedding, training is 3.5x slower on CPU
+    use_chars = True # if char embedding, training is 3.5x slower on CPU
